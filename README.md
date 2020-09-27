@@ -2,11 +2,11 @@
 
 #A workflow run is made up of one or more jobs. Jobs run in parallel by default.
 
-- Trigger the workflow on push or pull request you can choose whatever you want
+-Trigger the workflow on push or pull request you can choose whatever you want
 
     on: [push,pull_request]
 
-- The type of machine to run the job on. [Windows,macOS, Ubuntu, self-hosted]
+-The type of machine to run the job on. [Windows,macOS, Ubuntu, self-hosted]
 
     runs-on: macos-latest
     
@@ -18,11 +18,11 @@
 
     steps:
     
-- Check out the code from the repository
+-Check out the code from the repository
   
     uses: actions/checkout@v1
 
-- Setup a flutter environment.
+-Setup a flutter environment.
 
       - uses: subosito/flutter-action@v1
         with:
@@ -30,7 +30,7 @@
           channel: 'dev'
       - run: flutter pub get
 
-- run static analys code
+-run static analys code
  
        run: flutter  analyze
        
